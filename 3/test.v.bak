@@ -1,0 +1,8 @@
+module FullAdder(Ai, Bi, Ci_1, Si, Ci);
+input Ai, Bi, Ci_1;
+output Si, Ci;
+wire s1; wire c1; wire c2;
+HalfAdder u1(Ai, Bi, s1, c1);
+HalfAdder u2(Ci_1, s1, Si, c2);
+or u3(Ci, c1, c2);
+endmodule
