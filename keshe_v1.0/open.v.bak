@@ -1,0 +1,18 @@
+module open(open_signal, times, i);
+input times;
+output open_signal;
+
+input i;
+if(open_signal)
+begin
+	if(i <= times) i <= i+1;
+	else begin
+			i <= 0;
+			open_signal <= 0;
+			end
+	
+end
+
+else ;
+
+endmodule

@@ -1,0 +1,150 @@
+|keshe
+clk => clk.IN3
+r => r.IN3
+open_signal << open_signal.DB_MAX_OUTPUT_PORT_TYPE
+c_100 << c_100.DB_MAX_OUTPUT_PORT_TYPE
+close_signal << close:u3_close.port1
+arr => arr.IN2
+
+
+|keshe|wait_2s:u1_wait_2s
+clk => clk.IN1
+_r => r.IN0
+l => l.IN2
+p => p.IN2
+t => t.IN2
+d[0] => d[0].IN2
+d[1] => d[1].IN2
+d[2] => d[2].IN2
+d[3] => d[3].IN2
+q1[0] <= _74160:u1.port6
+q1[1] <= _74160:u1.port6
+q1[2] <= _74160:u1.port6
+q1[3] <= _74160:u1.port6
+q2[0] <= _74160:u2.port6
+q2[1] <= _74160:u2.port6
+q2[2] <= _74160:u2.port6
+q2[3] <= _74160:u2.port6
+c <> _74160:u1.port7
+c <> _74160:u2.port0
+c_100 <= _74160:u2.port7
+arr => r.IN1
+r_c => ~NO_FANOUT~
+
+
+|keshe|wait_2s:u1_wait_2s|_74160:u1
+CP => C~reg0.CLK
+CP => Q[0]~reg0.CLK
+CP => Q[1]~reg0.CLK
+CP => Q[2]~reg0.CLK
+CP => Q[3]~reg0.CLK
+Rd => Decoder0.IN0
+Rd => Equal0.IN0
+Rd => Q.OUTPUTSELECT
+Rd => Q.OUTPUTSELECT
+Rd => Q.OUTPUTSELECT
+Rd => Q.OUTPUTSELECT
+Rd => C.OUTPUTSELECT
+Rd => Q[0]~reg0.ACLR
+Rd => Q[1]~reg0.ACLR
+Rd => Q[2]~reg0.ACLR
+Rd => Q[3]~reg0.ACLR
+Rd => Equal3.IN0
+Rd => Equal4.IN0
+Rd => C~reg0.ENA
+LD => Decoder0.IN1
+LD => Equal0.IN1
+LD => Equal3.IN1
+LD => Equal4.IN1
+EP => Decoder0.IN2
+EP => Equal0.IN2
+ET => Decoder0.IN3
+ET => Equal0.IN3
+ET => Equal4.IN2
+D[0] => out_Q[0].DATAIN
+D[1] => out_Q[1].DATAIN
+D[2] => out_Q[2].DATAIN
+D[3] => out_Q[3].DATAIN
+Q[0] <> Q[0]~reg0
+Q[1] <> Q[1]~reg0
+Q[2] <> Q[2]~reg0
+Q[3] <> Q[3]~reg0
+C <= C~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|keshe|wait_2s:u1_wait_2s|_74160:u2
+CP => C~reg0.CLK
+CP => Q[0]~reg0.CLK
+CP => Q[1]~reg0.CLK
+CP => Q[2]~reg0.CLK
+CP => Q[3]~reg0.CLK
+Rd => Decoder0.IN0
+Rd => Equal0.IN0
+Rd => Q.OUTPUTSELECT
+Rd => Q.OUTPUTSELECT
+Rd => Q.OUTPUTSELECT
+Rd => Q.OUTPUTSELECT
+Rd => C.OUTPUTSELECT
+Rd => Q[0]~reg0.ACLR
+Rd => Q[1]~reg0.ACLR
+Rd => Q[2]~reg0.ACLR
+Rd => Q[3]~reg0.ACLR
+Rd => Equal3.IN0
+Rd => Equal4.IN0
+Rd => C~reg0.ENA
+LD => Decoder0.IN1
+LD => Equal0.IN1
+LD => Equal3.IN1
+LD => Equal4.IN1
+EP => Decoder0.IN2
+EP => Equal0.IN2
+ET => Decoder0.IN3
+ET => Equal0.IN3
+ET => Equal4.IN2
+D[0] => out_Q[0].DATAIN
+D[1] => out_Q[1].DATAIN
+D[2] => out_Q[2].DATAIN
+D[3] => out_Q[3].DATAIN
+Q[0] <> Q[0]~reg0
+Q[1] <> Q[1]~reg0
+Q[2] <> Q[2]~reg0
+Q[3] <> Q[3]~reg0
+C <= C~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|keshe|open:u2_open
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => open_signal~reg0.CLK
+open_en => always0.IN0
+open_signal <= open_signal~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r => always0.IN1
+arr => always0.IN1
+
+
+|keshe|close:u3_close
+clk => close_signal~reg0.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => s~4.DATAIN
+close_signal <= close_signal~reg0.DB_MAX_OUTPUT_PORT_TYPE
+open_signal => close_en.PRESET
+c_100 => always0.IN1
+c_100 => cnt.OUTPUTSELECT
+c_100 => cnt.OUTPUTSELECT
+c_100 => cnt.OUTPUTSELECT
+c_100 => cnt.OUTPUTSELECT
+c_100 => cnt.OUTPUTSELECT
+c_100 => s.OUTPUTSELECT
+c_100 => s.OUTPUTSELECT
+c_100 => s.OUTPUTSELECT
+c_100 => close_signal.OUTPUTSELECT
+r => ~NO_FANOUT~
+
+

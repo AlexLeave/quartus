@@ -1,0 +1,6 @@
+
+State Machine - |keshe|close:u3_close|s
+Name s.s1 s.s2 s.00 
+s.00 0 0 0 
+s.s1 1 0 1 
+s.s2 0 1 1 

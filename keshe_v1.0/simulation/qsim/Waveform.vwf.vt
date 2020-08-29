@@ -1,0 +1,270 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "08/29/2020 20:16:18"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    keshe
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module keshe_vlg_sample_tst(
+	arr,
+	clk,
+	r,
+	sampler_tx
+);
+input  arr;
+input  clk;
+input  r;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(arr or clk or r)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module keshe_vlg_check_tst (
+	c_100,
+	close_signal,
+	open_signal,
+	sampler_rx
+);
+input  c_100;
+input  close_signal;
+input  open_signal;
+input sampler_rx;
+
+reg  c_100_expected;
+reg  close_signal_expected;
+reg  open_signal_expected;
+
+reg  c_100_prev;
+reg  close_signal_prev;
+reg  open_signal_prev;
+
+reg  c_100_expected_prev;
+reg  close_signal_expected_prev;
+reg  open_signal_expected_prev;
+
+reg  last_c_100_exp;
+reg  last_close_signal_exp;
+reg  last_open_signal_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:3] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 3'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	c_100_prev = c_100;
+	close_signal_prev = close_signal;
+	open_signal_prev = open_signal;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	c_100_expected_prev = c_100_expected;
+	close_signal_expected_prev = close_signal_expected;
+	open_signal_expected_prev = open_signal_expected;
+end
+
+
+
+// expected c_100
+initial
+begin
+	c_100_expected = 1'bX;
+end 
+
+// expected open_signal
+initial
+begin
+	open_signal_expected = 1'bX;
+end 
+
+// expected close_signal
+initial
+begin
+	close_signal_expected = 1'bX;
+end 
+// generate trigger
+always @(c_100_expected or c_100 or close_signal_expected or close_signal or open_signal_expected or open_signal)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected c_100 = %b | expected close_signal = %b | expected open_signal = %b | ",c_100_expected_prev,close_signal_expected_prev,open_signal_expected_prev);
+	$display("| real c_100 = %b | real close_signal = %b | real open_signal = %b | ",c_100_prev,close_signal_prev,open_signal_prev);
+`endif
+	if (
+		( c_100_expected_prev !== 1'bx ) && ( c_100_prev !== c_100_expected_prev )
+		&& ((c_100_expected_prev !== last_c_100_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port c_100 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", c_100_expected_prev);
+		$display ("     Real value = %b", c_100_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_c_100_exp = c_100_expected_prev;
+	end
+	if (
+		( close_signal_expected_prev !== 1'bx ) && ( close_signal_prev !== close_signal_expected_prev )
+		&& ((close_signal_expected_prev !== last_close_signal_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port close_signal :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", close_signal_expected_prev);
+		$display ("     Real value = %b", close_signal_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_close_signal_exp = close_signal_expected_prev;
+	end
+	if (
+		( open_signal_expected_prev !== 1'bx ) && ( open_signal_prev !== open_signal_expected_prev )
+		&& ((open_signal_expected_prev !== last_open_signal_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port open_signal :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", open_signal_expected_prev);
+		$display ("     Real value = %b", open_signal_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_open_signal_exp = open_signal_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#10000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module keshe_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg arr;
+reg clk;
+reg r;
+// wires                                               
+wire c_100;
+wire close_signal;
+wire open_signal;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+keshe i1 (
+// port map - connection between master ports and signals/registers   
+	.arr(arr),
+	.c_100(c_100),
+	.clk(clk),
+	.close_signal(close_signal),
+	.open_signal(open_signal),
+	.r(r)
+);
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #5000 1'b1;
+	#5000;
+end 
+
+// r
+initial
+begin
+	r = 1'b0;
+	r = #3500000 1'b1;
+	r = #3500000 1'b0;
+end 
+
+// arr
+initial
+begin
+	arr = 1'b1;
+end 
+
+keshe_vlg_sample_tst tb_sample (
+	.arr(arr),
+	.clk(clk),
+	.r(r),
+	.sampler_tx(sampler)
+);
+
+keshe_vlg_check_tst tb_out(
+	.c_100(c_100),
+	.close_signal(close_signal),
+	.open_signal(open_signal),
+	.sampler_rx(sampler)
+);
+endmodule
+

@@ -1,0 +1,9 @@
+module keshe(clk, r, l, p, t, d, q, c);
+input clk;
+input r, l, p, t;
+input[3:0] d;
+output[3:0] q;
+output c;
+_74161 u1(clk, r, l, p, t, d, q, c); 
+
+endmodule

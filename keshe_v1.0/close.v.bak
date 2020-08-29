@@ -1,0 +1,6 @@
+module close(close_en, close_signal, open_signal, c_100)
+/*
+当 c_100下降沿代表可以关门
+*/
+
+endmodule
