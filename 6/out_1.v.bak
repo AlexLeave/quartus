@@ -1,0 +1,15 @@
+/*
+测试 inout 的项目
+*/
+
+module out_1(clk, p);
+inout p;
+input clk;
+
+reg p;
+always@ (negedge clk)
+p = 0;
+
+out_2 u1(clk, p);
+
+endmodule

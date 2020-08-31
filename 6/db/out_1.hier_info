@@ -1,0 +1,16 @@
+|out_1
+clk => clk.IN2
+p <> out_3:u1.port1
+p <> out_2:u2.port1
+
+
+|out_1|out_3:u1
+clk => ~NO_FANOUT~
+p <> <UNC>
+
+
+|out_1|out_2:u2
+clk => p~reg0.CLK
+p <> p~reg0
+
+

@@ -32,7 +32,12 @@ s1:if(c_100 == 0)
 					end
 		end
 
-s2:if(cnt < close_time) cnt <= cnt+1;
+s2:if(open_signal) begin
+							s = s0;
+							cnt <= 0;
+							close_signal = 0;
+						 end
+	else if(cnt < close_time) cnt <= cnt+1;
 	else begin
 				cnt <= 0;
 				close_signal = 0;

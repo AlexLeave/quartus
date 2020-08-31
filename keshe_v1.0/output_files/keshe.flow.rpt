@@ -1,5 +1,5 @@
 Flow report for keshe
-Sat Aug 29 20:16:19 2020
+Sat Aug 29 20:29:39 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Aug 29 20:16:19 2020       ;
+; Flow Status                        ; Successful - Sat Aug 29 20:29:39 2020       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; keshe                                       ;
 ; Top-level Entity Name              ; keshe                                       ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE10E22C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 42                                          ;
-;     Total combinational functions  ; 41                                          ;
+; Total logic elements               ; 43                                          ;
+;     Total combinational functions  ; 42                                          ;
 ;     Dedicated logic registers      ; 26                                          ;
 ; Total registers                    ; 26                                          ;
 ; Total pins                         ; 6                                           ;
@@ -64,30 +64,30 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/29/2020 20:16:15 ;
+; Start date & time ; 08/29/2020 20:28:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; keshe               ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                           ;
-+-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 198696039434392.159870337517664       ; --            ; --          ; --             ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                    ; --            ; --          ; eda_simulation ;
-; EDA_NETLIST_WRITER_OUTPUT_DIR       ; D:/altera/keshe_v1.0/simulation/qsim/ ; --            ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                  ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --             ;
-+-------------------------------------+---------------------------------------+---------------+-------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                            ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 198696039434392.159870411720564        ; --            ; --          ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                     ; --            ; --          ; eda_simulation ;
+; EDA_NETLIST_WRITER_OUTPUT_DIR       ; G:/quartus/keshe_v1.0/simulation/qsim/ ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                               ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                  ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                 ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -97,8 +97,10 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 4643 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4561 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4561 MB             ; 00:00:00                           ;
-; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4561 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4562 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4561 MB             ; 00:00:00                           ;
+; Total                ; 00:00:04     ; --                      ; --                  ; 00:00:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -110,6 +112,8 @@ applicable agreement for further details.
 ; Analysis & Synthesis ; LAPTOP-4V64BF08  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer   ; LAPTOP-4V64BF08  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer   ; LAPTOP-4V64BF08  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-4V64BF08  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-4V64BF08  ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
@@ -117,8 +121,10 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off keshe -c keshe
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog keshe -c keshe --vector_source=D:/altera/keshe_v1.0/Waveform.vwf --testbench_file=D:/altera/keshe_v1.0/simulation/qsim/Waveform.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=D:/altera/keshe_v1.0/simulation/qsim/ keshe -c keshe
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog keshe -c keshe --vector_source=G:/quartus/keshe_v1.0/Waveform.vwf --testbench_file=G:/quartus/keshe_v1.0/simulation/qsim/Waveform.vwf.vt
+quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=G:/quartus/keshe_v1.0/simulation/qsim/ keshe -c keshe
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog keshe -c keshe --vector_source=G:/quartus/keshe_v1.0/Waveform.vwf --testbench_file=G:/quartus/keshe_v1.0/simulation/qsim/Waveform.vwf.vt
+quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=G:/quartus/keshe_v1.0/simulation/qsim/ keshe -c keshe
 
 
 

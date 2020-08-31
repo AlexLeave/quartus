@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sat Aug 29 20:16:16 2020
+Analysis & Synthesis Status : Successful - Sat Aug 29 20:28:38 2020
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
 Revision Name : keshe
 Top-level Entity Name : keshe
 Family : Cyclone IV E
-Total logic elements : 42
-    Total combinational functions : 41
+Total logic elements : 43
+    Total combinational functions : 42
     Dedicated logic registers : 26
 Total registers : 26
 Total pins : 6

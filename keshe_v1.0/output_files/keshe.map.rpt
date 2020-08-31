@@ -1,5 +1,5 @@
 Analysis & Synthesis report for keshe
-Sat Aug 29 20:16:16 2020
+Sat Aug 29 20:28:38 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -49,13 +49,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Aug 29 20:16:16 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sat Aug 29 20:28:38 2020       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; keshe                                       ;
 ; Top-level Entity Name              ; keshe                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 42                                          ;
-;     Total combinational functions  ; 41                                          ;
+; Total logic elements               ; 43                                          ;
+;     Total combinational functions  ; 42                                          ;
 ;     Dedicated logic registers      ; 26                                          ;
 ; Total registers                    ; 26                                          ;
 ; Total pins                         ; 6                                           ;
@@ -170,17 +170,17 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                 ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path   ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
-; keshe.v                          ; yes             ; User Verilog HDL File  ; D:/altera/keshe_v1.0/keshe.v   ;         ;
-; _74160.v                         ; yes             ; User Verilog HDL File  ; D:/altera/keshe_v1.0/_74160.v  ;         ;
-; wait_2s.v                        ; yes             ; User Verilog HDL File  ; D:/altera/keshe_v1.0/wait_2s.v ;         ;
-; open.v                           ; yes             ; User Verilog HDL File  ; D:/altera/keshe_v1.0/open.v    ;         ;
-; close.v                          ; yes             ; User Verilog HDL File  ; D:/altera/keshe_v1.0/close.v   ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                  ;
++----------------------------------+-----------------+------------------------+---------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path    ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------+---------+
+; keshe.v                          ; yes             ; User Verilog HDL File  ; G:/quartus/keshe_v1.0/keshe.v   ;         ;
+; _74160.v                         ; yes             ; User Verilog HDL File  ; G:/quartus/keshe_v1.0/_74160.v  ;         ;
+; wait_2s.v                        ; yes             ; User Verilog HDL File  ; G:/quartus/keshe_v1.0/wait_2s.v ;         ;
+; open.v                           ; yes             ; User Verilog HDL File  ; G:/quartus/keshe_v1.0/open.v    ;         ;
+; close.v                          ; yes             ; User Verilog HDL File  ; G:/quartus/keshe_v1.0/close.v   ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -188,16 +188,16 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 42        ;
+; Estimated Total logic elements              ; 43        ;
 ;                                             ;           ;
-; Total combinational functions               ; 41        ;
+; Total combinational functions               ; 42        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 19        ;
-;     -- 3 input functions                    ; 8         ;
-;     -- <=2 input functions                  ; 14        ;
+;     -- 4 input functions                    ; 20        ;
+;     -- 3 input functions                    ; 5         ;
+;     -- <=2 input functions                  ; 17        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 33        ;
+;     -- normal mode                          ; 34        ;
 ;     -- arithmetic mode                      ; 8         ;
 ;                                             ;           ;
 ; Total registers                             ; 26        ;
@@ -208,8 +208,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 20        ;
-; Total fan-out                               ; 208       ;
-; Average fan-out                             ; 2.63      ;
+; Total fan-out                               ; 209       ;
+; Average fan-out                             ; 2.61      ;
 +---------------------------------------------+-----------+
 
 
@@ -218,8 +218,8 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
-; |keshe                     ; 41 (0)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |keshe                              ; work         ;
-;    |close:u3_close|        ; 21 (21)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |keshe|close:u3_close               ; work         ;
+; |keshe                     ; 42 (0)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |keshe                              ; work         ;
+;    |close:u3_close|        ; 22 (22)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |keshe|close:u3_close               ; work         ;
 ;    |open:u2_open|          ; 9 (9)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |keshe|open:u2_open                 ; work         ;
 ;    |wait_2s:u1_wait_2s|    ; 11 (3)            ; 10 (8)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |keshe|wait_2s:u1_wait_2s           ; work         ;
 ;       |_74160:u1|          ; 4 (4)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |keshe|wait_2s:u1_wait_2s|_74160:u1 ; work         ;
@@ -270,8 +270,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |keshe|close:u3_close|cnt[4]    ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |keshe|close:u3_close|Selector1 ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |keshe|close:u3_close|cnt[4]    ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |keshe|close:u3_close|Selector1 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
@@ -338,7 +338,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Sat Aug 29 20:16:14 2020
+    Info: Processing started: Sat Aug 29 20:28:37 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off keshe -c keshe
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file keshe.v
@@ -371,30 +371,30 @@ Info (12128): Elaborating entity "open" for hierarchy "open:u2_open"
 Warning (10230): Verilog HDL assignment warning at open.v(24): truncated value with size 32 to match size of target (5)
 Info (12128): Elaborating entity "close" for hierarchy "close:u3_close"
 Warning (10230): Verilog HDL assignment warning at close.v(28): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at close.v(35): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at close.v(40): truncated value with size 32 to match size of target (5)
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
     Critical Warning (18010): Register close:u3_close|close_en will power up to High
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file D:/altera/keshe_v1.0/output_files/keshe.map.smsg
+Info (144001): Generated suppressed messages file G:/quartus/keshe_v1.0/output_files/keshe.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 48 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 49 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 42 logic cells
+    Info (21061): Implemented 43 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 15 warnings
     Info: Peak virtual memory: 4643 megabytes
-    Info: Processing ended: Sat Aug 29 20:16:16 2020
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Sat Aug 29 20:28:38 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/altera/keshe_v1.0/output_files/keshe.map.smsg.
+The suppressed messages can be found in G:/quartus/keshe_v1.0/output_files/keshe.map.smsg.
 
 

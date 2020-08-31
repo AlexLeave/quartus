@@ -1,4 +1,4 @@
-module wait_2s(clk, _r, l, p, t, d, q1, q2, c, c_100, arr, r_c);
+module wait_2s(clk, _r, l, p, t, d, q1, q2, c, c_100, arr, r_c, status);
 /*
 在电梯运行到达模块应该有把开门位开放位1
 */
@@ -6,13 +6,15 @@ module wait_2s(clk, _r, l, p, t, d, q1, q2, c, c_100, arr, r_c);
 //clk输入为50HZ
 input r_c; //r_c为人按下关门按钮
 input clk, arr;
-input _r, l, p, t;
+input _r, l, p, t;//r为用户开门按钮
 input[3:0] d;
 output[3:0] q1;
 output[3:0] q2;
 inout c;
 output c_100;
 wire r;
+
+output status;
 
 assign r= arr & _r;//只有到站和用户不按开门按钮时候计数等待
 //组合100进制
